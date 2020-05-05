@@ -5,8 +5,7 @@ import AboutModal from "./aboutModal"
 
 const Logo = () => {
   const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const toggleShow = () => setShow(!show)
   return (
     <>
       <div>
@@ -21,12 +20,12 @@ const Logo = () => {
         <h5 className="text-secondary m-0">modern photo gallery</h5>
         <button
           className="btn btn-outline-primary border border-white py-0 px-5 font-weight-bold"
-          onClick={handleShow}
+          onClick={toggleShow}
         >
           About
         </button>
       </div>
-      <AboutModal show={show} handleClose={handleClose} />
+      <AboutModal show={show} toggleShow={toggleShow} />
     </>
   )
 }
