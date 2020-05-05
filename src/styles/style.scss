@@ -1,0 +1,81 @@
+// CHANGE DEFAULT COLORS
+$primary: #92bbb7;
+$secondary: #945d37;
+
+// CHANGE DEFAULT FONTS
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;700&display=swap");
+$font-family-base: "Darker Grotesque", sans-serif;
+
+// $link-hover-color: 0%;
+// $emphasized-link-hover-darken-percentage: 0%;
+@import "~bootstrap/scss/bootstrap.scss";
+
+//  ****************** end of CUTSOMIZE BOOTSTRAP******************
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  // letter-spacing: 3px;
+  // opacity: 0;
+  // transition: opacity 0.5s;
+}
+
+h1,
+h2,
+h5,
+h6,
+button,
+a {
+  letter-spacing: 3px;
+}
+
+.showcase {
+  background: linear-gradient($secondary, $secondary) bottom left/ 15% 1px,
+    linear-gradient($secondary, $secondary) bottom left/ 1px 50%,
+    linear-gradient($secondary, $secondary) top right/ 1px 50%,
+    linear-gradient($secondary, $secondary) top right/ 15% 1px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  width: 95%;
+}
+
+.photos {
+  opacity: 0.7;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.02) rotateZ(1deg);
+  }
+}
+
+.email {
+  letter-spacing: 1px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 4px;
+    padding-left: 4px;
+    margin: 4px 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .showcase {
+    background: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    width: 50%;
+  }
+}
