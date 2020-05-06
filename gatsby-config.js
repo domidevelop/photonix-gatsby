@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Photonix`,
     titleTemplate: `Photonix · modern photo gallery`,
-    description: `Modern imgage gallery built with Gatsby.`,
+    description: `Modern image gallery built with Gatsby.`,
     author: `Domagoj Kirigin`,
     url: `https://photonix.live`,
     twitterUsername: `@domidevelop`,
@@ -23,11 +23,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `P H O T O N I X`,
+        short_name: `P H O T O N I X`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ffffff`,
+        theme_color: `#92bbb7`,
         display: `standalone`,
         icon: `src/images/photonix_logo.png`,
         crossOrigin: `use-credentials`,
