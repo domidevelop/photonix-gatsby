@@ -18,17 +18,14 @@ html {
 
 body {
   overflow-x: hidden;
-  // letter-spacing: 3px;
-  // opacity: 0;
-  // transition: opacity 0.5s;
+  letter-spacing: 3px;
 }
 
-h1,
-h2,
-h5,
-h6,
-button,
-a {
+p {
+  letter-spacing: 0;
+}
+
+button {
   letter-spacing: 3px;
 }
 
@@ -48,7 +45,7 @@ a {
   &:hover {
     opacity: 1;
     cursor: pointer;
-    transform: scale(1.02) rotateZ(1deg);
+    transform: rotateZ(1deg);
   }
 }
 
@@ -56,10 +53,54 @@ a {
   letter-spacing: 1px;
 }
 
-.model-header {
+.lightbox-header {
   margin: 0;
   padding: 0;
   font-size: 1rem;
+}
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.modal-body {
+  padding-top: 0;
+}
+
+.slideshow {
+  position: relative;
+  .lightbox-btn {
+    transition: all 0.5s;
+  }
+  &:hover > .lightbox-btn {
+    opacity: 0.6;
+  }
+}
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  // left: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0rem;
+  opacity: 0;
+  &:focus {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    box-shadow: none;
+  }
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
 }
 
 .no-gutters {
@@ -77,6 +118,15 @@ a {
 @media (max-width: 300px) {
   .showcase {
     background: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-body {
+    padding: 0;
+  }
+  .about-modal {
+    padding: 0.5rem;
   }
 }
 

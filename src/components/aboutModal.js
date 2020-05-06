@@ -17,22 +17,24 @@ const AboutModal = ({ show, toggleShow }) => {
         </button>
       </Modal.Header>
       <Modal.Body>
-        <p className="h4 font-weight-normal">
-          I am Domi, a front end developer and nature lover! <br /> This is a
-          collection of my own photos that I try to update regularly. Thanks for
-          visiting! :) <br />
-        </p>
-        <p className="lead font-weight-normal">
-          Connect:{" "}
-          <a
-            href="mailto:domidevelop@outlook.com"
-            class="font-weight-bold email"
-          >
-            domidevelop@outlook.com
-          </a>
-          <br /> Portfolio:
-          <DomidevelopLink />
-        </p>
+        <div className="about-modal">
+          <p className="h4 font-weight-normal">
+            I am Domi, a front end developer and nature lover! <br /> This is a
+            collection of my own photos that I try to update regularly. Thanks
+            for visiting! :) <br />
+          </p>
+          <p className="lead font-weight-normal">
+            Connect:{" "}
+            <a
+              href="mailto:domidevelop@outlook.com"
+              class="font-weight-bold email"
+            >
+              domidevelop@outlook.com
+            </a>
+            <br /> Portfolio:
+            <DomidevelopLink />
+          </p>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <button

@@ -18,29 +18,42 @@ const Lightbox = ({
     <Modal show={show} size={"lg"} centered={true} onHide={toggleLightbox}>
       <Modal.Body>
         <div className="d-flex justify-content-between align-items-center p-2">
-          <p className="model-header">
+          <p className="lightbox-header">
             {selectedPhoto + 1} / {photos.length}
           </p>
-          <button className="btn model-header" onClick={toggleLightbox}>
+          <button className="btn lightbox-header" onClick={toggleLightbox}>
             <FontAwesomeIcon icon={faTimes} className="text-muted" />
           </button>
         </div>
-
-        <Img
-          fluid={photos[selectedPhoto].node.childImageSharp.fluid}
-          key={`0${selectedPhoto}-${photos[selectedPhoto].node.id}`}
-          alt={`Beautiful photo number ${selectedPhoto}`}
-          className="img-fluid"
-          backgroundColor={true}
-        />
-        <div className="d-flex justify-content-between mt-3">
-          <button className="btn btn-light mr-auto" onClick={goBack}>
+        <div className="slideshow">
+          <Img
+            fluid={photos[selectedPhoto].node.childImageSharp.fluid}
+            key={`0${selectedPhoto}-${photos[selectedPhoto].node.id}`}
+            alt={`Beautiful photo number ${selectedPhoto}`}
+            className="img-fluid"
+            backgroundColor={true}
+          />
+          <button
+            className="btn btn-light lightbox-btn left-btn"
+            onClick={goBack}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="btn btn-light lightbox-btn right-btn"
+            onClick={goForward}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+        {/* <div className="d-flex justify-content-between mt-3">
+          <button className="btn btn-light" onClick={goBack}>
             <FontAwesomeIcon icon={faChevronLeft} /> Previous
           </button>
           <button className="btn btn-light" onClick={goForward}>
             Next <FontAwesomeIcon icon={faChevronRight} />
           </button>
-        </div>
+        </div> */}
       </Modal.Body>
     </Modal>
   )

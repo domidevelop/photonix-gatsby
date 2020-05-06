@@ -11,7 +11,7 @@ const Gallery = () => {
           node {
             id
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
