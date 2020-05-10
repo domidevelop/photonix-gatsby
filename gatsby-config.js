@@ -6,7 +6,7 @@ module.exports = {
     author: `Domagoj Kirigin`,
     url: `https://photonix.live`,
     twitterUsername: `@domidevelop`,
-    image: `gatsby-icon.png`,
+    image: `thumbnail_photonix.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
